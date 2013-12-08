@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true"
+         mapTestClassNameToCoveredClassName="true">
+    <testsuites>
+        <testsuite name="PHP Scalar Tests">
+            <directory suffix="Test.php" phpVersion="5.3.0" phpVersionOperator=">=">tests/Scalar/*</directory>
+        </testsuite>
+    </testsuites>    
+</phpunit>
