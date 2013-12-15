@@ -10,7 +10,5 @@ use Scalar\String;
 
 $string = new String('We love Foo');
 
-$string->replace('Foo', 'Bar');
-$string->toUpper();
-
-echo $string . PHP_EOL;
+echo $string->replace('Foo', 'Bar')
+            ->toUpper();

@@ -2,6 +2,8 @@
 
 namespace Scalar\Operation;
 
+use Scalar\AbstractScalar;
+
 /**
  * Description of ToUpper
  *
@@ -9,8 +11,16 @@ namespace Scalar\Operation;
  */
 class Replace
 {
-    public static function direct($find, $replace, $value)
+    public static function direct($find, $replace, AbstractScalar $scalar)
     {
-        return str_replace($find, $replace, $value);
+        $scalar->setValue(
+            str_replace(
+                $find,
+                $replace,
+                $scalar->getValue()
+            )
+        );
+        
+        return $scalar;
     }
 }

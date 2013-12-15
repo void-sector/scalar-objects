@@ -111,15 +111,13 @@ abstract class AbstractScalar
      */
     public function __call($method, $params)
     {
-        array_push($params, $this->getValue());
+        array_push($params, $this);
         
         $class = 'Scalar\\Operation\\' . ucfirst($method);
         
-        $this->setValue(
-            call_user_func_array(
-                array($class, 'direct'),
-                $params
-            )
+        return call_user_func_array(
+            array($class, 'direct'),
+            $params
         );
     }
 }

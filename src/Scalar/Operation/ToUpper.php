@@ -9,8 +9,11 @@ namespace Scalar\Operation;
  */
 class ToUpper
 {
-    public static function direct($value)
+    public static function direct(\Scalar\AbstractScalar $scalar)
     {
-        return strtoupper($value);
+        $scalar->setValue(
+            strtoupper($scalar->getValue())
+        );
+        return $scalar;
     }
 }
