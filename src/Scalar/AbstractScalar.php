@@ -4,6 +4,7 @@ namespace Scalar;
 
 use InvalidArgumentException;
 use Scalar\Validator\ValidatorInterface;
+use Scalar\Operation;
 
 
 abstract class AbstractScalar
@@ -110,14 +111,15 @@ abstract class AbstractScalar
      */
     public function __call($method, $params)
     {
-        if (!function_exists($method)) {
-            throw new \Exception('Fatal Error: call to undefined method/function ' . $method);
-        }
-        
         array_push($params, $this->getValue());
         
+        $class = 'Scalar\\Operation\\' . ucfirst($method);
+        
         $this->setValue(
-            call_user_func_array($method, $params)
+            call_user_func_array(
+                array($class, 'direct'),
+                $params
+            )
         );
     }
 }

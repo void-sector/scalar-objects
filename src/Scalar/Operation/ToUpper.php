@@ -7,10 +7,10 @@ namespace Scalar\Operation;
  *
  * @author pascaln
  */
-class ToLower
+class ToUpper
 {
-    public function direct($value)
+    public static function direct($value)
     {
-        return strtolower($value);
+        return strtoupper($value);
     }
 }

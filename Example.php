@@ -1,28 +1,17 @@
 <?php
 
+error_reporting(-1);
+ini_set('display_errors', true);
+
 require('./vendor/autoload.php');
 
 
 use Scalar\String;
-use Scalar\Float;
-
-
-
-$float1 = new Float(1.01111);
-$float2 = new Float(33.0);
-
-$float1->ceil();
-
-echo $float1 . PHP_EOL;
-
-echo $float1 < $float2 ? 'yep' : 'nop';
-
 
 $string = new String('We love Foo');
 
-$string->str_replace('Foo', 'Bar');
-$string->strtoupper();
-
+$string->replace('Foo', 'Bar');
+$string->toUpper();
 
 echo $string . PHP_EOL;
 
