@@ -2,7 +2,7 @@
 
 require('vendor/autoload.php');
 
-use Scalar\Validator\Boolean as BooleanValidator;
+use Scalar\Validator\Bool as BoolValidator;
 
 class BooleanValidatorTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +12,7 @@ class BooleanValidatorTest extends PHPUnit_Framework_TestCase
     
     public function setUp()
     {
-        $this->validator = new BooleanValidator;
+        $this->validator = new BoolValidator;
     }    
 
     

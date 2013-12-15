@@ -2,7 +2,7 @@
 
 namespace Scalar\Validator;
 
-class Integer implements ValidatorInterface
+class Int implements ValidatorInterface
 {
     
     /**

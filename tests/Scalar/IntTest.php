@@ -2,14 +2,14 @@
 
 require('vendor/autoload.php');
 
-use Scalar\Integer;
+use Scalar\Int;
 
-class IntegerTest extends PHPUnit_Framework_TestCase
+class IntTest extends PHPUnit_Framework_TestCase
 {
 
     public function testIntegerGetValue()
     {
-        $integer = new Integer(12);
+        $integer = new Int(12);
 
         $this->assertSame(12, $integer->getValue());
     }
@@ -17,7 +17,7 @@ class IntegerTest extends PHPUnit_Framework_TestCase
     
     public function testIntegerSetNewValue()
     {
-        $integer = new Integer(12);
+        $integer = new Int(12);
         
         $integer->setValue(33);
         
@@ -30,7 +30,7 @@ class IntegerTest extends PHPUnit_Framework_TestCase
      */
     public function testNewIntegerWithNoneInterger()
     {
-        new Integer(true);
+        new Int(true);
     }
     
 
@@ -41,7 +41,7 @@ class IntegerTest extends PHPUnit_Framework_TestCase
      */
     public function testIntegerSetValueAsStringArgument()
     {
-        $integer = new Integer(12);
+        $integer = new Int(12);
         
         $integer->setValue('Foo');
     }

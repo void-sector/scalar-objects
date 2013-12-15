@@ -2,14 +2,14 @@
 
 require('vendor/autoload.php');
 
-use Scalar\Boolean;
+use Scalar\Bool;
 
-class BooleanTest extends PHPUnit_Framework_TestCase
+class BoolTest extends PHPUnit_Framework_TestCase
 {
 
     public function testBooleanGetValue()
     {
-        $boolean = new Boolean(true);
+        $boolean = new Bool(true);
 
         $this->assertSame(true, $boolean->getValue());
     }
@@ -17,7 +17,7 @@ class BooleanTest extends PHPUnit_Framework_TestCase
     
     public function testBooleanSetNewValue()
     {
-        $boolean = new Boolean(true);
+        $boolean = new Bool(true);
         
         $boolean->setValue(false);
         
@@ -30,7 +30,7 @@ class BooleanTest extends PHPUnit_Framework_TestCase
      */
     public function testNewBooleanWithNoneInterger()
     {
-        new Boolean('Foo');
+        new Bool('Foo');
     }
     
 
@@ -41,7 +41,7 @@ class BooleanTest extends PHPUnit_Framework_TestCase
      */
     public function testBooleanSetValueAsStringArgument()
     {
-        $boolean = new Boolean(true);
+        $boolean = new Bool(true);
         
         $boolean->setValue('Foo');
     }

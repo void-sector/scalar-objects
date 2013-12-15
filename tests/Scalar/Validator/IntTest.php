@@ -2,7 +2,7 @@
 
 require('vendor/autoload.php');
 
-use Scalar\Validator\Integer as IntegerValidator;
+use Scalar\Validator\Int as IntValidator;
 
 class IntegerValidatorTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +12,7 @@ class IntegerValidatorTest extends PHPUnit_Framework_TestCase
     
     public function setUp()
     {
-        $this->validator = new IntegerValidator;
+        $this->validator = new IntValidator;
     }
     
     

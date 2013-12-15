@@ -2,7 +2,7 @@
 
 namespace Scalar\Validator;
 
-class Boolean implements ValidatorInterface
+class Bool implements ValidatorInterface
 {
     
     /**
