@@ -77,7 +77,7 @@ abstract class AbstractScalar
      */
     public function __call($method, array $params)
     {
-        array_push($params, $this);
+        array_unshift($params, $this);
         
         $class = __NAMESPACE__ . '\\Operation\\' . ucfirst($method);
         
