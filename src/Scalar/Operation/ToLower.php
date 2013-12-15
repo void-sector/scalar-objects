@@ -2,15 +2,22 @@
 
 namespace Scalar\Operation;
 
+use Scalar\AbstractScalar;
+
 /**
- * Description of ToUpper
+ * Description of ToLower
  *
- * @author pascaln
+ * @author void-sector
  */
 class ToLower
 {
-    public static function direct($value)
+    /**
+     * Transforms the String to LowerCase
+     * @param \Scalar\AbstractScalar $scalar
+     * @return string
+     */
+    public static function direct(AbstractScalar $scalar)
     {
-        return strtolower($value);
+        return strtolower($scalar->getValue());
     }
 }

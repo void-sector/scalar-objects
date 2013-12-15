@@ -2,18 +2,22 @@
 
 namespace Scalar\Operation;
 
+use Scalar\AbstractScalar;
+
 /**
  * Description of ToUpper
  *
- * @author pascaln
+ * @author void-sector
  */
 class ToUpper
 {
-    public static function direct(\Scalar\AbstractScalar $scalar)
+    /**
+     * Transforms the String to UpperCase
+     * @param \Scalar\AbstractScalar $scalar
+     * @return string
+     */
+    public static function direct(AbstractScalar $scalar)
     {
-        $scalar->setValue(
-            strtoupper($scalar->getValue())
-        );
-        return $scalar;
+        return strtoupper($scalar->getValue());
     }
 }

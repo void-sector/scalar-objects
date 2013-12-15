@@ -4,7 +4,6 @@ namespace Scalar;
 
 use InvalidArgumentException;
 use Scalar\Validator\ValidatorInterface;
-use Scalar\Operation;
 
 
 abstract class AbstractScalar
@@ -12,6 +11,7 @@ abstract class AbstractScalar
     /**
      * Placeholder for the Value
      * @var mixed
+     * @access private
      */
     private $value;
 
@@ -19,6 +19,7 @@ abstract class AbstractScalar
     /**
      * Placeholder for the Validator
      * @var ValidatorInterface
+     * @access private
      */
     private $validator;
 
@@ -30,42 +31,20 @@ abstract class AbstractScalar
      */
     public function __construct(ValidatorInterface $validator, $param)
     {
-        $this->setValidator($validator);
+        $this->validator = $validator;
         $this->setValue($param);
     }
     
-    
-    /**
-     * Set Validator
-     * @access private
-     * @param ValidatorInterface $validator
-     */
-    private function setValidator(ValidatorInterface $validator)
-    {
-        $this->validator = $validator;
-    }
-    
-    
-    /**
-     * Get Validator
-     * @access private
-     * @return ValidatorInterface
-     */
-    private function getValidator()
-    {
-        return $this->validator;
-    }
-
 
     /**
      * Set value and validates the value
      * @param mixed $param
      * @access private
-     * @return null
+     * @return AbstractSalar
      */
     public function setValue($param)
     {
-        if (false === $this->getValidator()->isValid($param)) {
+        if (false === $this->validator->isValid($param)) {
 
             $class = get_class($this->validator);
 
@@ -75,12 +54,13 @@ abstract class AbstractScalar
         }
 
         $this->value = $param;
+        
+        return $this;
     }
 
 
     /**
      * Get's the value
-     *
      * @access public
      * @return mixed
      */
@@ -88,36 +68,40 @@ abstract class AbstractScalar
     {
         return $this->value;
     }
-    
+
     
     /**
-     * Maby only for Strings?
-     * @return type
+     * Calls Methods on the Object
+     * @param string $method
+     * @param array $params
      */
-    public function __toString()
+    public function __call($method, array $params)
     {
-        return (string) $this->getValue();
+        array_push($params, $this);
+        
+        $class = __NAMESPACE__ . '\\Operation\\' . ucfirst($method);
+        
+        $result = call_user_func_array(
+            array($class, 'direct'),
+            $params
+        );
+        
+        if (false === $this->validator->isValid($result)) {
+            return $result;
+        }
+        
+        $this->setValue($result);
+
+        return $this;
     }
     
     
     /**
-     * Bad Practice to use this (it works though)
-     * 
-     * Maby as a trait on a string??
-     * 
-     * @param type $method
-     * @param type $params
-     * @throws \BadFunctionCallException
+     * Returns the value of the objects as a string
+     * @return string
      */
-    public function __call($method, $params)
+    public function __toString()
     {
-        array_push($params, $this);
-        
-        $class = 'Scalar\\Operation\\' . ucfirst($method);
-        
-        return call_user_func_array(
-            array($class, 'direct'),
-            $params
-        );
+        return (string) $this->getValue();
     }
 }
