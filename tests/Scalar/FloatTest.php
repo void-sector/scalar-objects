@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Float;
 
 class FloatTest extends PHPUnit_Framework_TestCase
