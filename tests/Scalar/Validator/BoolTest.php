@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Validator\Bool as BoolValidator;
 
 class BooleanValidatorTest extends PHPUnit_Framework_TestCase
