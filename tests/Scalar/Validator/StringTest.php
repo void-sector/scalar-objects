@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Validator\String as StringValidator;
 
 class StringValidatorTest extends PHPUnit_Framework_TestCase
