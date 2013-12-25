@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Int;
 
 class IntTest extends PHPUnit_Framework_TestCase
