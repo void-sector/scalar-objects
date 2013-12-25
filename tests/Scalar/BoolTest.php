@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Bool;
 
 class BoolTest extends PHPUnit_Framework_TestCase
