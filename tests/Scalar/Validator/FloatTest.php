@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Validator\Float as FloatValidator;
 
 class FloatValidatorTest extends PHPUnit_Framework_TestCase
