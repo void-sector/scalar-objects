@@ -1,10 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
-use Scalar\AbstractScalar;
-use Scalar\Validator\ValidatorInterface;
-
 class AbstractScalarTest extends PHPUnit_Framework_TestCase
 {
     protected $value = "We love Foo";
