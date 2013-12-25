@@ -1,4 +1,13 @@
 {
+    "name": "void-sector/php-scalar-objects",
+    "description": "PHP Scalar Objects",
+    "keywords": ["PHP", "Scalar"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "void-sector"
+        }
+    ],    
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },    
