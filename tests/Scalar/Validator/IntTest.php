@@ -1,7 +1,5 @@
 <?php
 
-require('vendor/autoload.php');
-
 use Scalar\Validator\Int as IntValidator;
 
 class IntegerValidatorTest extends PHPUnit_Framework_TestCase
