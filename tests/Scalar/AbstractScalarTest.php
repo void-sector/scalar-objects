@@ -39,5 +39,31 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
             "we rule the world"
         );
     }
+
+
+
+    public function testToString()
+    {
+        $this->abstractScalar->setValue("we rule the world");
+
+        $this->assertSame((string) $this->abstractScalar, "we rule the world");
+    }
     
+
+
+    /**
+     * @expectedException InvalidArgumentException
+     * @expectedExceptionMessage Scalar\String expects a string as a parameter
+     */
+    public function testSetInvalidType()
+    {
+        $this->abstractScalar = $this->getMockForAbstractClass(
+            "Scalar\AbstractScalar",
+            array(
+                new Scalar\Validator\String,
+                22
+            )
+        );
+    }
 }
+
