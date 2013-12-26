@@ -75,7 +75,7 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
         $this->abstractScalar->setValue('We Love Foo');
 
         $this->assertSame(
-            $this->abstractScalar->toUpper(),
+            (string) $this->abstractScalar->toUpper(),
             'WE LOVE FOO'
         );
     }
