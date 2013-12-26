@@ -70,7 +70,7 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
      * @expectedException InvalidArgumentException
      * @expectedExceptionMessage Scalar\String expects a string as a parameter
      */
-    public function testSetInvalidType()
+    public function testCallMagicMethod()
     {
         $this->abstractScalar->setValue('We Love Foo');
 
