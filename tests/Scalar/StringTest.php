@@ -43,4 +43,12 @@ class StringTest extends PHPUnit_Framework_TestCase
         
         $string->setValue(32);
     }    
+
+    
+    public function testStringSetValueWithNoneSdtringAsParameter()
+    {
+        $string = new String('Foo');
+        
+        $string->toUpper();
+    }    
 }
