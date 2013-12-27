@@ -9,7 +9,9 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
 **The project is work in progress.** I'm still trying to find a nice way to delegate the Operation calls following the [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle). Please take a look at the [Open Issues](https://github.com/void-sector/scalar-objects/issues?state=open) for more information.
 
 
-## Example
+## Examples
+
+String Usage:
 
     <?php
 
@@ -23,6 +25,22 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
     $string->toUpper();
 
     echo $string . PHP_EOL; // results in: WE LOVE CODING!
+
+
+Flaot Usage:
+
+    <?php
+
+    require('./vendor/autoload.php');
+
+    use Scalar\Float;
+
+    $float = new Float(33.3333333);
+
+    $float->ceil();
+
+    echo $float . PHP_EOL; // results in: 34
+
 
 ### Contribute ###
 
