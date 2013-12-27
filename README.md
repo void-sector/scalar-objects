@@ -1,7 +1,7 @@
-php-scalar-objects
+Scalar-objects
 ==================
 
-PHP Scalar Objects in PHP. Scalar values gets validated when initialized. Handy when used with Type Hinting.
+Scalar Objects in PHP. Scalar values gets validated when initialized. Handy when used with Type Hinting.
 
 [![Build Status](https://travis-ci.org/void-sector/php-scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/php-scalar-objects)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/badges/quality-score.png?s=03a5c3db1004cccb4a6bcd9aeb91db8e56a01a43)](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/)
