@@ -1,6 +1,6 @@
 # Scalar-objects #
 
-Support for method calls on primitive types in PHP. Allows you to use [Type Hinting](http://www.php.net/manual/en/language.oop5.typehinting.php) on the primitives in your OO project. Values are validated when constructed using there own validators.
+Supports method calls on primitive types in PHP. Allows you to use [Type Hinting](http://www.php.net/manual/en/language.oop5.typehinting.php) on the primitives in your OO project. Values are validated when constructed using there own validators.
 
 [![Build Status](https://travis-ci.org/void-sector/scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/scalar-objects)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/quality-score.png?s=ea73f05a66608d98ea953c10d896da80b2b77aa2)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
