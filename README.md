@@ -26,6 +26,6 @@ Support for method calls on primitive types in PHP. Values are validated when co
 This is work in progress.
 I'm still trying to find a nice way to delegate the method calls following the [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle). The project is [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md), [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) compatable.
 
-If you got any suggestions, idea's or improvements , please fork the project and do a pull request.
+If you got suggestions, idea's or improvements , please fork the project and initialize a pull request.
 
 Happy Coding!
