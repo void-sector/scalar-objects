@@ -24,6 +24,7 @@ Support for method calls on primitive types in PHP. Values are validated when co
 
 ### Contribute
 
-This is work in progress, still trying to find a nice way to delegate the method calls (Operations) following the [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle).
+This is work in progress
+I'm still trying to find a nice way to delegate the method calls following the [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle).
 
 If you got any idea's, please fork the project and make a pull request. 
