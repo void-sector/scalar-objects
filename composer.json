@@ -1,7 +1,7 @@
 {
-    "name": "void-sector/ScalarObjects",
-    "description": "PHP Scalar Objects",
-    "keywords": ["PHP", "Scalar", "Objects"],
+    "name": "void-sector/scalar-objects",
+    "description": "Scalar Objects in PHP",
+    "keywords": ["Scalar", "Objects", "PHP"],
     "license": "MIT",
     "authors": [
         {
