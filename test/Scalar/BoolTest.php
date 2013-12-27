@@ -43,10 +43,4 @@ class BoolTest extends PHPUnit_Framework_TestCase
         
         $boolean->setValue('Foo');
     }
-
-    
-    public function testFoo()
-    {
-        $this->assertTrue(false);
-    }
 }
