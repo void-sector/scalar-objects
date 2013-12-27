@@ -37,10 +37,11 @@ abstract class AbstractScalar
     
 
     /**
-     * Set value and validates the value
+     * Sets a value to the Object
      * @param mixed $param
      * @access private
-     * @return AbstractSalar
+     * @throws InvalidArgumentException if trying to set a primitive string to a Scalar/Int
+     * @return AbstractScalar
      */
     public function setValue($param)
     {
@@ -74,6 +75,8 @@ abstract class AbstractScalar
      * Calls Methods on the Object
      * @param string $method
      * @param array $params
+     * @return mixed [AbstractScalar if type is the same after the operation|mixed value if type changes]
+     * @note Need to refactor this, still looking for a way to make this pretty
      */
     public function __call($method, array $params)
     {
