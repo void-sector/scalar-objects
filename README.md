@@ -1,6 +1,6 @@
 # Scalar-objects
 
-Support for method calls on primitive types in PHP. Values gets validated when initialized. Handy when used with Type Hinting.
+Support for method calls on primitive types in PHP. Values are validated when constructed using there own validators. Handy when used with Type Hinting in your OO project.
 
 [![Build Status](https://travis-ci.org/void-sector/ScalarObjects.png?branch=master)](https://travis-ci.org/void-sector/ScalarObjects)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/badges/quality-score.png?s=50937d234c07bce292c265daee3acb250399f99d)](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/)
