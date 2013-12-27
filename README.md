@@ -2,9 +2,9 @@
 
 Support for method calls on primitive types in PHP. Values are validated when constructed using there own validators. Handy when used with Type Hinting in your OO project.
 
-[![Build Status](https://travis-ci.org/void-sector/ScalarObjects.png?branch=master)](https://travis-ci.org/void-sector/ScalarObjects)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/badges/quality-score.png?s=50937d234c07bce292c265daee3acb250399f99d)](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/)
-[![Code Coverage](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/badges/coverage.png?s=c4c78454335d1346711b5369d02bca07f8bad20c)](https://scrutinizer-ci.com/g/void-sector/ScalarObjects/)
+[![Build Status](https://travis-ci.org/void-sector/scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/scalar-objects)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/quality-score.png?s=ea73f05a66608d98ea953c10d896da80b2b77aa2)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
+[![Code Coverage](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/coverage.png?s=8c73f8bc619e734abb4bc56610a7726117f6d216)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
 
 
 ## Example
