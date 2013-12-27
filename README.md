@@ -11,7 +11,7 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
 
 ## Examples
 
-String Usage:
+**String Example:**
 
     <?php
 
@@ -27,7 +27,7 @@ String Usage:
     echo $string . PHP_EOL; // results in: WE LOVE CODING!
 
 
-Flaot Usage:
+**Float Example:**
 
     <?php
 
