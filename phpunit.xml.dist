@@ -3,12 +3,24 @@
 <phpunit bootstrap="vendor/autoload.php" colors="true">
     <testsuites>
         <testsuite name="PHP Scalar Objects">
-            <directory>./tests</directory>
+            <directory suffix="Test.php">test</directory>
         </testsuite>
     </testsuites>
+    <logging>
+        <log type="coverage-html"
+             target="build/coverage"
+             charset="UTF-8"
+             yui="true"
+             highlight="true"
+             lowUpperBound="35"
+             highLowerBound="70"/>
+    </logging>    
     <filter>
         <whitelist>
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">src</directory>
         </whitelist>
+        <exclude>
+            <file>src/Scalar/Validator/ValidatorInterface.php</file>
+        </exclude>        
     </filter>
 </phpunit>

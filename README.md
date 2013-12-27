@@ -1,27 +1,33 @@
-php-scalar-objects
-==================
+# Scalar-objects
 
-PHP Scalar Objects in PHP. Scalar values gets validated when initialized. Handy when used with Type Hinting.
+[![Build Status](https://travis-ci.org/void-sector/scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/scalar-objects)
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/quality-score.png?s=ea73f05a66608d98ea953c10d896da80b2b77aa2)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
+[![Code Coverage](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/coverage.png?s=8c73f8bc619e734abb4bc56610a7726117f6d216)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
 
-[![Build Status](https://travis-ci.org/void-sector/php-scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/php-scalar-objects)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/badges/quality-score.png?s=03a5c3db1004cccb4a6bcd9aeb91db8e56a01a43)](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/)
-[![Code Coverage](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/badges/coverage.png?s=b527f7d7564220fea80be65f2475fe5b0c4a18dd)](https://scrutinizer-ci.com/g/void-sector/php-scalar-objects/)
+Supports method calls on primitive types in PHP. Allows you to use [Type Hinting](http://www.php.net/manual/en/language.oop5.typehinting.php) on the primitives in your OO project. Values are validated when constructed using there own validators. The project is [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md), [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) compatable.
 
-# Example
+**The project is work in progress.** I'm still trying to find a nice way to delegate the Operation calls following the [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle). Please take a look at the [Open Issues](https://github.com/void-sector/scalar-objects/issues?state=open) for more information.
+
+
+## Example
 
     <?php
 
-    error_reporting(-1);
-    ini_set('display_errors', true);
-
     require('./vendor/autoload.php');
-
 
     use Scalar\String;
 
-    $string = new String('We love Foo');
+    $string = new String('We love Fruit!');
 
-    $string->replace('Foo', 'Bar');
+    $string->replace('Fruit', 'Coding');
     $string->toUpper();
 
-    echo $string . PHP_EOL;
+    echo $string . PHP_EOL; // results in: WE LOVE CODING!
+
+### Contribute ###
+
+If you got suggestions, idea's or improvements , please fork the project and initialize a pull request.
+
+Please take a look at the [Open Issues](https://github.com/void-sector/scalar-objects/issues?state=open)
+
+Happy Coding!
