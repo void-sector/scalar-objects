@@ -1,4 +1,4 @@
-Scalar-objects
+# Scalar-objects
 ==================
 
 Support for method calls on primitive types in PHP. Values gets validated when initialized. Handy when used with Type Hinting.
@@ -12,7 +12,7 @@ This is work in progress, still trying to find a nice way to delegate the method
 
 If you got any idea's, please fork the project and make a pull request. 
 
-# Example
+## Example
 
     <?php
 
