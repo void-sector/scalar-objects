@@ -2,7 +2,6 @@
 
 use Scalar\Operation\Replace;
 
-
 class ReplaceTest extends PHPUnit_Framework_TestCase
 {
     public function testReplace()
@@ -14,12 +13,12 @@ class ReplaceTest extends PHPUnit_Framework_TestCase
         
         $expect = 'We Love Bar';
         
-        $interface = $this->getMock('Scalar\Validator\ValidatorInterface');
-        
-        $mock = $this->getMockForAbstractClass('Scalar\AbstractScalar', array($interface, $string));
-        
         $this->assertSame(
-            Replace::direct($mock, $find, $replace),
+            Replace::direct(
+                $this->getMock('\Scalar\String', array('__construct'), array($string)),
+                $find,
+                $replace
+            ),
             $expect
         );
     }

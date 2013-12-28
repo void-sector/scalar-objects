@@ -2,7 +2,6 @@
 
 use Scalar\Operation\Ceil;
 
-
 class CeilTest extends PHPUnit_Framework_TestCase
 {
     public function testCeil()
@@ -12,13 +11,7 @@ class CeilTest extends PHPUnit_Framework_TestCase
         
         $this->assertSame(
             Ceil::direct(
-                $this->getMockForAbstractClass(
-                    'Scalar\AbstractScalar',
-                    array(
-                        $this->getMock('Scalar\Validator\ValidatorInterface'),
-                        $float
-                    )
-                )
+                $this->getMock('\Scalar\Float', array('__construct'), array($float))
             ),
             $expect
         );

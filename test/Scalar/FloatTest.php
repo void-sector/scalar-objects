@@ -7,19 +7,19 @@ class FloatTest extends PHPUnit_Framework_TestCase
 
     public function testFloatGetValue()
     {
-        $float = new Float(3.14159265359);
+        $float = new Float(M_PI);
 
-        $this->assertSame(3.14159265359, $float->getValue());
+        $this->assertSame(M_PI, $float->getValue());
     }
     
     
     public function testFloatSetNewValue()
     {
-        $float = new Float(3.14159265359);
+        $float = new Float(M_PI);
         
-        $float->setValue(2.16);
+        $float->setValue(M_PI_2);
         
-        $this->assertSame(2.16, $float->getValue());
+        $this->assertSame(M_PI_2, $float->getValue());
     }    
     
     
@@ -39,7 +39,7 @@ class FloatTest extends PHPUnit_Framework_TestCase
      */
     public function testFloatSetValueAsStringArgument()
     {
-        $float = new Float(3.14159265359);
+        $float = new Float(M_PI);
         
         $float->setValue('Foo');
     }

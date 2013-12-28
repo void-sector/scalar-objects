@@ -5,14 +5,41 @@ use Scalar\String;
 class StringTest extends PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @expectedException InvalidArgumentException
+     * @expectedExceptionMessage Scalar\String expects a string as a parameter
+     */
+    public function testStringWithInvalidParameter()
+    {
+        new String(32);
+    }
+    
+    
+    public function testString()
+    {
+        new String('Foo');
+    }    
+    
+    
+    /**
+     * @expectedException InvalidArgumentException
+     * @expectedExceptionMessage Scalar\String expects a string as a parameter
+     */
+    public function testStringSetInvalidParameter()
+    {
+        $string = new String('Foo');
+        
+        $string->setValue(32);
+    }    
+    
+    
     public function testStringGetValue()
     {
         $string = new String("Foo");
 
         $this->assertSame("Foo", $string->getValue());
     }
-
-
+    
     
     public function testStringSetNewValue()
     {
@@ -22,33 +49,12 @@ class StringTest extends PHPUnit_Framework_TestCase
         
         $this->assertSame('Bar', $string->getValue());
     }
-    
 
     
-    /**
-     * @expectedException InvalidArgumentException
-     */
-    public function testNewStringWithNoneStringAsParameter()
+    public function testStringCastObjectToString()
     {
-        new String(32);
+        $string = new String("Foo");
+
+        $this->assertSame("Foo", (string) $string);
     }
-    
-    
-    /**
-     * @expectedException InvalidArgumentException
-     */
-    public function testStringSetValueWithNoneStringAsParameter()
-    {
-        $string = new String('Foo');
-        
-        $string->setValue(32);
-    }    
-
-    
-    public function testStringSetValueWithNoneSdtringAsParameter()
-    {
-        $string = new String('Foo');
-        
-        $string->toUpper();
-    }    
 }

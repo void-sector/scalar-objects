@@ -35,7 +35,7 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
         $this->abstractScalar->setValue("we rule the world");
         
         $this->assertSame(
-            $this->abstractScalar->getValue("we rule the world"),
+            $this->abstractScalar->getValue(),
             "we rule the world"
         );
     }
@@ -72,8 +72,10 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
 
     public function testCallMagicMethod()
     {
+        $stub = $this->getMock('\Scalar\String', array('__construct'), array($this->value));
+        
         $this->assertSame(
-            (string) $this->abstractScalar->toUpper(),
+            (string) $stub->toUpper(),
             'WE LOVE FOO'
         );
     }
