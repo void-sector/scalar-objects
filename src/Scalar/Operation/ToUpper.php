@@ -2,7 +2,7 @@
 
 namespace Scalar\Operation;
 
-use Scalar\AbstractScalar;
+use Scalar\String;
 
 /**
  * Description of ToUpper
@@ -13,10 +13,10 @@ class ToUpper
 {
     /**
      * Transforms the String to UpperCase
-     * @param \Scalar\AbstractScalar $scalar
+     * @param String $scalar
      * @return string
      */
-    public static function direct(AbstractScalar $scalar)
+    public static function direct(String $scalar)
     {
         return strtoupper($scalar->getValue());
     }

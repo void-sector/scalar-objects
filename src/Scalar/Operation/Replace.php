@@ -2,7 +2,7 @@
 
 namespace Scalar\Operation;
 
-use Scalar\AbstractScalar;
+use Scalar\String;
 
 /**
  * Description of ToUpper
@@ -13,12 +13,12 @@ class Replace
 {
     /**
      * Performs a StringReplace on the String Object
-     * @param \Scalar\AbstractScalar $scalar
+     * @param String $scalar
      * @param string $find
      * @param string $replace
      * @return string
      */
-    public static function direct(AbstractScalar $scalar, $find, $replace)
+    public static function direct(String $scalar, $find, $replace)
     {
         return str_replace($find, $replace, $scalar->getValue());
     }

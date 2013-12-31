@@ -24,7 +24,7 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
     $string->replace('Fruit', 'Coding');
     $string->toUpper();
 
-    echo $string . PHP_EOL; // results in: WE LOVE CODING!
+    echo $string->getValue() . PHP_EOL; // results in: WE LOVE CODING!
 
 
 **Float Example:**
@@ -39,13 +39,11 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
 
     $float->ceil();
 
-    echo $float . PHP_EOL; // results in: 34
+    echo $float->getValue() . PHP_EOL; // results in: 34.0
 
 
 ### Contribute ###
 
 If you got suggestions, idea's or improvements , please fork the project and initialize a pull request.
-
-Please take a look at the [Open Issues](https://github.com/void-sector/scalar-objects/issues?state=open)
 
 Happy Coding!
