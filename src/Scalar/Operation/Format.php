@@ -11,7 +11,7 @@ class Format
      * Formats a string
      * @return string
      */
-    public static function direct()
+    public function direct()
     {
         $args = func_get_args();
         $args[0] = $args[0]->getValue();

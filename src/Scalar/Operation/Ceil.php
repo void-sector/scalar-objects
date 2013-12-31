@@ -14,7 +14,7 @@ class Ceil
      * @param \Scalar\Float eg 13.22222
      * @return float eg 14.0
      */
-    public static function direct(Float $scalar)
+    public function direct(Float $scalar)
     {
         return ceil($scalar->getValue());
     }

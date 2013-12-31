@@ -14,7 +14,7 @@ class Length
      * @param \Scalar\String $scalar
      * @return int the length of the String
      */
-    public static function direct(String $scalar)
+    public function direct(String $scalar)
     {
         return strlen($scalar->getValue());
     }
