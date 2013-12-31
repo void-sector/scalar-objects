@@ -79,5 +79,15 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
             'WE LOVE FOO'
         );
     }
+
+    public function testCallMagicMethodOtherReturnType()
+    {
+        $stub = $this->getMock('\Scalar\String', array('__construct'), array($this->value));
+
+        $this->assertSame(
+            $stub->length(),
+            11
+        );
+    }
 }
 

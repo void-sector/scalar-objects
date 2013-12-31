@@ -10,11 +10,6 @@ class LengthTest extends PHPUnit_Framework_TestCase
 
         $mock = $this->getMock('\Scalar\String', array('__construct'), array($string));
 
-        $this->assertSame(
-            Length::direct(
-                $mock
-            ),
-            11
-        );
+        $this->assertSame(11, Length::direct($mock));
     }
 }
