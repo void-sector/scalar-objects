@@ -87,10 +87,8 @@ abstract class AbstractScalar
     {
         array_unshift($params, $this);
         
-        $operation = OperationRegistry::getInstance()->get($method);
-        
         $result = call_user_func_array(
-            array($operation, 'direct'),
+            array(OperationRegistry::get($method), 'direct'),
             $params
         );
         
