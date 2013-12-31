@@ -15,7 +15,7 @@ class ToLower
      * @param String $scalar
      * @return string
      */
-    public static function direct(String $scalar)
+    public function direct(String $scalar)
     {
         return strtolower($scalar->getValue());
     }

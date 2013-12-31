@@ -16,7 +16,7 @@ class Replace
      * @param string $replace
      * @return string
      */
-    public static function direct(String $scalar, $find, $replace)
+    public function direct(String $scalar, $find, $replace)
     {
         return str_replace($find, $replace, $scalar->getValue());
     }

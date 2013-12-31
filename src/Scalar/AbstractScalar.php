@@ -3,12 +3,14 @@
 namespace Scalar;
 
 use InvalidArgumentException;
+use Scalar\Operation\OperationRegistry;
 use Scalar\Validator\ValidatorInterface;
 
 abstract class AbstractScalar
 {
     /**
      * Placeholder for the Value
+     *
      * @var mixed
      * @access private
      */
@@ -17,6 +19,7 @@ abstract class AbstractScalar
 
     /**
      * Placeholder for the Validator
+     *
      * @var ValidatorInterface
      * @access private
      */
@@ -25,6 +28,7 @@ abstract class AbstractScalar
 
     /**
      * Constructor
+     *
      * @param ValidatorInterface $validator
      * @param mixed $param
      */
@@ -37,10 +41,11 @@ abstract class AbstractScalar
 
     /**
      * Sets a value to the Object
+     *
      * @param mixed $param
      * @access private
-     * @throws InvalidArgumentException if trying to set a primitive string to a Scalar/Int
      * @return AbstractScalar
+     * @throws InvalidArgumentException if trying to set a primitive string to a Scalar/Int
      */
     public function setValue($param)
     {
@@ -61,6 +66,7 @@ abstract class AbstractScalar
 
     /**
      * Get's the value
+     *
      * @access public
      * @return mixed
      */
@@ -72,19 +78,19 @@ abstract class AbstractScalar
     
     /**
      * Calls Methods on the Object
+     *
      * @param string $method
      * @param array $params
      * @return mixed [AbstractScalar if type is the same after the operation|mixed value if type changes]
-     * @note Need to refactor this, still looking for a way to make this pretty
      */
     public function __call($method, array $params)
     {
         array_unshift($params, $this);
         
-        $class = __NAMESPACE__ . '\\Operation\\' . ucfirst($method);
+        $operation = OperationRegistry::getInstance()->get($method);
         
         $result = call_user_func_array(
-            array($class, 'direct'),
+            array($operation, 'direct'),
             $params
         );
         
@@ -92,15 +98,15 @@ abstract class AbstractScalar
             return $result;
         }
         
-        $this->setValue($result);
-
-        return $this;
+        return $this->setValue($result);
     }
     
     
     /**
      * Returns the value of the objects as a string
-     * @return string
+     * 
+     * @deprecated since version 1.0
+     * @return string The String value of the Scalar Object
      */
     public function __toString()
     {
