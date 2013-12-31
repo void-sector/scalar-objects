@@ -12,14 +12,6 @@ class OperationRegistry
 
 
     /**
-     * @access private
-     */
-    private function __construct()
-    {
-    }
-
-
-    /**
      * Get an Operation from the Registry by name
      *
      * @param string $operation
