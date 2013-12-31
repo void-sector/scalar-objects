@@ -4,7 +4,6 @@ namespace Scalar\Validator;
 
 class String implements ValidatorInterface
 {
-    
     /**
      * Constant ErrorMessage holds the error message
      */

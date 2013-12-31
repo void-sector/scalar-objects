@@ -4,8 +4,6 @@ namespace Scalar\Operation;
 
 /**
  * Description of Format
- *
- * @author void-sector
  */
 class Format
 {
@@ -23,4 +21,3 @@ class Format
         );
     }
 }
-

@@ -6,8 +6,6 @@ use Scalar\String;
 
 /**
  * Description of ToUpper
- *
- * @author void-sector
  */
 class Replace
 {

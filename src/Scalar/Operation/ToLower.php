@@ -7,8 +7,6 @@ use Scalar\String;
 
 /**
  * Description of ToLower
- *
- * @author void-sector
  */
 class ToLower
 {

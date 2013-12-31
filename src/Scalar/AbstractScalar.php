@@ -5,7 +5,6 @@ namespace Scalar;
 use InvalidArgumentException;
 use Scalar\Validator\ValidatorInterface;
 
-
 abstract class AbstractScalar
 {
     /**

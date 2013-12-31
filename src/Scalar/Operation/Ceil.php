@@ -4,11 +4,8 @@ namespace Scalar\Operation;
 
 use Scalar\Float;
 
-
 /**
  * Description of Ceil
- *
- * @author void-sector
  */
 class Ceil
 {

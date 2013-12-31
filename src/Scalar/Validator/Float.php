@@ -4,7 +4,6 @@ namespace Scalar\Validator;
 
 class Float implements ValidatorInterface
 {
-    
     /**
      * Constant ERROR_MESSAGE holds the error string
      */

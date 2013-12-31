@@ -4,7 +4,6 @@ namespace Scalar\Validator;
 
 class Int implements ValidatorInterface
 {
-    
     /**
      * Constant ErrorMessage holds the error message
      */
