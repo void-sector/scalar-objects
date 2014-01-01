@@ -7,9 +7,11 @@ class ToUpperTest extends PHPUnit_Framework_TestCase
     public function testToUpper()
     {
         $string = 'We Love Foo';
-        
+
+        $toUpper = new ToUpper;
+
         $this->assertSame(
-            ToUpper::direct(
+            $toUpper->direct(
                 $this->getMock('\Scalar\String', array('__construct'), array($string))
             ),
             strtoupper($string)

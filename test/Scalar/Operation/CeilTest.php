@@ -8,9 +8,11 @@ class CeilTest extends PHPUnit_Framework_TestCase
     {
         $float = 13.0000001;
         $expect = 14.0;
-        
+
+        $ceil = new Ceil;
+
         $this->assertSame(
-            Ceil::direct(
+            $ceil->direct(
                 $this->getMock('\Scalar\Float', array('__construct'), array($float))
             ),
             $expect

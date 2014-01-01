@@ -13,9 +13,11 @@ class FormatTest extends PHPUnit_Framework_TestCase
         $param2 = 'World';
         
         $expect = 'We Rule the World';
-        
+
+        $format = new Format;
+
         $this->assertSame(
-            Format::direct(
+            $format->direct(
                 $this->getMock('\Scalar\String', array('__construct'), array($string)),                
                 $param1,
                 $param2

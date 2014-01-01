@@ -12,9 +12,11 @@ class ReplaceTest extends PHPUnit_Framework_TestCase
         $replace = 'Bar';
         
         $expect = 'We Love Bar';
-        
+
+        $replaceOperation = new Replace;
+
         $this->assertSame(
-            Replace::direct(
+            $replaceOperation->direct(
                 $this->getMock('\Scalar\String', array('__construct'), array($string)),
                 $find,
                 $replace
