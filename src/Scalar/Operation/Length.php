@@ -7,7 +7,7 @@ use Scalar\String;
 /**
  * Description of Length
  */
-class Length
+class Length implements OperationInterface
 {
     /**
      * Performs a String Length on the String Object

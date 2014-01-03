@@ -7,7 +7,7 @@ use Scalar\Float;
 /**
  * Description of Ceil
  */
-class Ceil
+class Ceil implements OperationInterface
 {
     /**
      * Ceil a float

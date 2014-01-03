@@ -7,7 +7,7 @@ use Scalar\String;
 /**
  * Description of ToUpper
  */
-class ToUpper
+class ToUpper implements OperationInterface
 {
     /**
      * Transforms the String to UpperCase

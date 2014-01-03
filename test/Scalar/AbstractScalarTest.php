@@ -75,7 +75,7 @@ class AbstractScalarTest extends PHPUnit_Framework_TestCase
         $stub = $this->getMock('\Scalar\String', array('__construct'), array($this->value));
         
         $this->assertSame(
-            (string) $stub->toUpper(),
+             $stub->toUpper()->getValue(),
             'WE LOVE FOO'
         );
     }

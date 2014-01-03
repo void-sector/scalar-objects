@@ -5,7 +5,7 @@ namespace Scalar\Operation;
 /**
  * Description of Format
  */
-class Format
+class Format implements OperationInterface
 {
     /**
      * Formats a string

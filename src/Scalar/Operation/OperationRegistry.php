@@ -20,13 +20,23 @@ class OperationRegistry
     public static function get($operation)
     {
         if (!isset(self::$operations[$operation])) {
-            self::$operations[$operation] = self::load($operation);
+            self::set(
+                $operation,
+                self::load($operation)
+            );
         }
 
         return self::$operations[$operation];
     }
 
 
+    
+    public static function set($name, OperationInterface $operation)
+    {
+        self::$operations[$name] = $operation;
+    }
+    
+    
     /**
      * Loads a new Operation
      *

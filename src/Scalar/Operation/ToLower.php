@@ -4,11 +4,10 @@ namespace Scalar\Operation;
 
 use Scalar\String;
 
-
 /**
  * Description of ToLower
  */
-class ToLower
+class ToLower implements OperationInterface
 {
     /**
      * Transforms the String to LowerCase

@@ -7,7 +7,7 @@ use Scalar\String;
 /**
  * Description of ToUpper
  */
-class Replace
+class Replace implements OperationInterface
 {
     /**
      * Performs a StringReplace on the String Object
