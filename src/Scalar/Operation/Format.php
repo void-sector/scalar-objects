@@ -9,6 +9,7 @@ class Format implements OperationInterface
 {
     /**
      * Formats a string
+     * 
      * @return string
      */
     public function direct()

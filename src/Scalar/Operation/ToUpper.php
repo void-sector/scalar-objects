@@ -11,6 +11,7 @@ class ToUpper implements OperationInterface
 {
     /**
      * Transforms the String to UpperCase
+     * 
      * @param String $scalar
      * @return string
      */

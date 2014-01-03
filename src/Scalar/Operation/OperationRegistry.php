@@ -5,10 +5,10 @@ namespace Scalar\Operation;
 class OperationRegistry
 {
     /**
-     *
+     * PlaceHolder for the Operations
      * @var array
      */
-    private static $operations;
+    private static $operations = array();
 
 
     /**
@@ -30,7 +30,12 @@ class OperationRegistry
     }
 
 
-    
+    /**
+     * Set an Operation to the Registry
+     * 
+     * @param type $name
+     * @param \Scalar\Operation\OperationInterface $operation
+     */
     public static function set($name, OperationInterface $operation)
     {
         self::$operations[$name] = $operation;
@@ -40,6 +45,7 @@ class OperationRegistry
     /**
      * Loads a new Operation
      *
+     * @access private
      * @param string $operation
      * @return \Scalar\Operation\OperationInterface
      */

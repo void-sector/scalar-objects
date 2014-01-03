@@ -11,6 +11,7 @@ class ToLower implements OperationInterface
 {
     /**
      * Transforms the String to LowerCase
+     * 
      * @param String $scalar
      * @return string
      */

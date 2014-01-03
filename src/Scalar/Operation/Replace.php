@@ -11,6 +11,7 @@ class Replace implements OperationInterface
 {
     /**
      * Performs a StringReplace on the String Object
+     * 
      * @param String $scalar
      * @param string $find
      * @param string $replace
