@@ -15,7 +15,7 @@ class OperationRegistry
      * Get an Operation from the Registry by name
      *
      * @param string $operation
-     * @return \Scalar\Operation\Interface
+     * @return \Scalar\Operation\OperationInterface
      */
     public static function get($operation)
     {
@@ -33,7 +33,7 @@ class OperationRegistry
     /**
      * Set an Operation to the Registry
      * 
-     * @param type $name
+     * @param string $name
      * @param \Scalar\Operation\OperationInterface $operation
      */
     public static function set($name, OperationInterface $operation)

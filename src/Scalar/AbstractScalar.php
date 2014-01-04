@@ -51,10 +51,10 @@ abstract class AbstractScalar
     {
         if (false === $this->validator->isValid($param)) {
 
-            $class = get_class($this->validator);
+            $validator = get_class($this->validator);
 
             throw new InvalidArgumentException(
-                $class::ERROR_MESSAGE
+                $validator::ERROR_MESSAGE
             );
         }
 
