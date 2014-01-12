@@ -2,7 +2,7 @@
 
 namespace Scalar\Validator;
 
-class Bool implements ValidatorInterface
+class Bool extends AbstractValidator implements ValidatorInterface
 {
     /**
      * Constant ErrorMessage holds the error message

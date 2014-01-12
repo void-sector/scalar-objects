@@ -2,7 +2,7 @@
 
 namespace Scalar\Validator;
 
-class String implements ValidatorInterface
+class String extends AbstractValidator implements ValidatorInterface
 {
     /**
      * Constant ErrorMessage holds the error message

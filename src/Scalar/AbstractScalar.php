@@ -50,11 +50,8 @@ abstract class AbstractScalar
     public function setValue($param)
     {
         if (false === $this->validator->isValid($param)) {
-
-            $class = get_class($this->validator);
-
             throw new InvalidArgumentException(
-                $class::ERROR_MESSAGE
+                $this->validator->getErrorMessage()
             );
         }
 
