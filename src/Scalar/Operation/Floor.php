@@ -5,18 +5,18 @@ namespace Scalar\Operation;
 use Scalar\Float;
 
 /**
- * Description of Ceil
+ * Description of Floor
  */
-class Ceil implements OperationInterface
+class Floor implements OperationInterface
 {
     /**
-     * Ceil a float
+     * Floor a float
      * 
      * @param \Scalar\Float eg 13.22222
-     * @return float eg 14.0
+     * @return float eg 13.0
      */
     public function direct(Float $scalar)
     {
-        return ceil($scalar->getValue());
+        return floor($scalar->getValue());
     }
 }

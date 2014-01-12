@@ -12,7 +12,7 @@ class Bool extends AbstractValidator implements ValidatorInterface
 
     /**
      * IsValid checks if the parameter is a boolean
-     * @param type $param
+     * @param string $param
      * @return boolean
      */
     public function isValid($param)

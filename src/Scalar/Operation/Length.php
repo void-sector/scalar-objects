@@ -7,10 +7,11 @@ use Scalar\String;
 /**
  * Description of Length
  */
-class Length
+class Length implements OperationInterface
 {
     /**
      * Performs a String Length on the String Object
+     * 
      * @param \Scalar\String $scalar
      * @return int the length of the String
      */
