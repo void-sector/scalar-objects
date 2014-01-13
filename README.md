@@ -14,6 +14,8 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
 **String Example:**
 
 ```php
+<?php
+
 require('./vendor/autoload.php');
 
 use Scalar\String;
@@ -29,6 +31,8 @@ echo $string->getValue() . PHP_EOL; // results in: WE LOVE CODING!
 **Float Example:**
 
 ```php
+<?php
+
 require('./vendor/autoload.php');
 
 use Scalar\Float;
