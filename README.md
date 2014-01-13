@@ -13,34 +13,32 @@ Supports method calls on primitive types in PHP. Allows you to use [Type Hinting
 
 **String Example:**
 
-    <?php
+```php
+require('./vendor/autoload.php');
 
-    require('./vendor/autoload.php');
+use Scalar\String;
 
-    use Scalar\String;
+$string = new String('We love Fruit!');
 
-    $string = new String('We love Fruit!');
+$string->replace('Fruit', 'Coding');
+$string->toUpper();
 
-    $string->replace('Fruit', 'Coding');
-    $string->toUpper();
-
-    echo $string->getValue() . PHP_EOL; // results in: WE LOVE CODING!
-
+echo $string->getValue() . PHP_EOL; // results in: WE LOVE CODING!
+```
 
 **Float Example:**
 
-    <?php
+```php
+require('./vendor/autoload.php');
 
-    require('./vendor/autoload.php');
+use Scalar\Float;
 
-    use Scalar\Float;
+$float = new Float(33.3333333);
 
-    $float = new Float(33.3333333);
+$float->ceil();
 
-    $float->ceil();
-
-    echo $float->getValue() . PHP_EOL; // results in: 34.0
-
+echo $float->getValue() . PHP_EOL; // results in: 34.0
+```
 
 ### Contribute ###
 
