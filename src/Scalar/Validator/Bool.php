@@ -11,12 +11,13 @@ class Bool extends AbstractValidator implements ValidatorInterface
 
 
     /**
-     * IsValid checks if the parameter is a boolean
-     * @param string $param
+     * Validate the Param to be a valid type boolean
+     * 
+     * @param mixed $value
      * @return boolean
      */
-    public function isValid($param)
+    public function isValid($value)
     {
-        return is_bool($param);
+        return is_bool($value);
     }
 }

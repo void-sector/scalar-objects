@@ -6,11 +6,16 @@ use Scalar\Validator\Bool as BoolValidator;
 
 class Bool extends AbstractScalar
 {
-    final public function __construct($param)
+    /**
+     * Bool constructor 
+     * 
+     * @param type $value
+     */
+    final public function __construct($value)
     {
         parent::__construct(
             new BoolValidator(),
-            $param
+            $value
         );
     }
 }

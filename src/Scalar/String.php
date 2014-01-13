@@ -6,11 +6,16 @@ use Scalar\Validator\String as StringValidator;
 
 class String extends AbstractScalar
 {
-    final public function __construct($param)
+    /**
+     * String Constructor
+     * 
+     * @param type $value
+     */
+    final public function __construct($value)
     {
         parent::__construct(
             new StringValidator(),
-            $param
+            $value
         );
     }
 }

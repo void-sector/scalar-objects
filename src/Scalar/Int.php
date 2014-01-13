@@ -6,11 +6,16 @@ use Scalar\Validator\Int as IntValidator;
 
 class Int extends AbstractScalar
 {
-    final public function __construct($param)
+    /**
+     * Int Constructor
+     * 
+     * @param type $value
+     */
+    final public function __construct($value)
     {
         parent::__construct(
             new IntValidator(),
-            $param
+            $value
         );
     }
 }

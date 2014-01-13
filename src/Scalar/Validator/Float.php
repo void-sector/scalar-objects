@@ -12,11 +12,12 @@ class Float extends AbstractValidator implements ValidatorInterface
 
     /**
      * Validate the Param to be a valid type float
-     * @param mixed $param
+     * 
+     * @param mixed $value
      * @return boolean
      */
-    public function isValid($param)
+    public function isValid($value)
     {
-        return is_float($param);
+        return is_float($value);
     }
 }

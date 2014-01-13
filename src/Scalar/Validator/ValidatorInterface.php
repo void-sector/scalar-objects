@@ -11,5 +11,5 @@ interface ValidatorInterface
     /**
      * Validates the $value to be a valid primitive type
      */
-    public function isValid($param);
+    public function isValid($value);
 }

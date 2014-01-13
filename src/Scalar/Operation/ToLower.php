@@ -12,11 +12,11 @@ class ToLower implements OperationInterface
     /**
      * Transforms the String to LowerCase
      * 
-     * @param \Scalar\String $scalar
+     * @param \Scalar\String $string
      * @return string
      */
-    public function direct(String $scalar)
+    public function direct(String $string)
     {
-        return strtolower($scalar->getValue());
+        return strtolower($string->getValue());
     }
 }

@@ -12,11 +12,11 @@ class Ceil implements OperationInterface
     /**
      * Ceil a float
      * 
-     * @param \Scalar\Float eg 13.22222
+     * @param \Scalar\Float $float eg 13.22222
      * @return float eg 14.0
      */
-    public function direct(Float $scalar)
+    public function direct(Float $float)
     {
-        return ceil($scalar->getValue());
+        return ceil($float->getValue());
     }
 }

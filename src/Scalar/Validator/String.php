@@ -12,11 +12,12 @@ class String extends AbstractValidator implements ValidatorInterface
     
     /**
      * Validate the Param to be a valid type string
-     * @param mixed $param
+     * 
+     * @param mixed $value
      * @return boolean
      */
-    public function isValid($param)
+    public function isValid($value)
     {
-        return is_string($param);
+        return is_string($value);
     }
 }

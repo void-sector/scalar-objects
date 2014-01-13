@@ -12,11 +12,11 @@ class Length implements OperationInterface
     /**
      * Performs a String Length on the String Object
      * 
-     * @param \Scalar\String $scalar
+     * @param \Scalar\String $string
      * @return int the length of the String
      */
-    public function direct(String $scalar)
+    public function direct(String $string)
     {
-        return strlen($scalar->getValue());
+        return strlen($string->getValue());
     }
 }

@@ -43,7 +43,6 @@ abstract class AbstractScalar
      * Sets a value to the Object
      *
      * @param mixed $param
-     * @access private
      * @return AbstractScalar
      * @throws InvalidArgumentException if trying to set a primitive string to a Scalar/Int
      */
@@ -64,7 +63,6 @@ abstract class AbstractScalar
     /**
      * Get's the value
      *
-     * @access public
      * @return mixed
      */
     public function getValue()
