@@ -48,4 +48,4 @@ echo $float->getValue() . PHP_EOL; // results in: 34.0
 
 If you got suggestions, idea's or improvements , please fork the project and initialize a pull request.
 
-Happy Coding!
+Happy Coding!!
