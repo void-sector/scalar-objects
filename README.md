@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/void-sector/scalar-objects.png?branch=master)](https://travis-ci.org/void-sector/scalar-objects)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/quality-score.png?s=ea73f05a66608d98ea953c10d896da80b2b77aa2)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
 [![Code Coverage](https://scrutinizer-ci.com/g/void-sector/scalar-objects/badges/coverage.png?s=8c73f8bc619e734abb4bc56610a7726117f6d216)](https://scrutinizer-ci.com/g/void-sector/scalar-objects/)
+[![Coverage Status](https://coveralls.io/repos/void-sector/scalar-objects/badge.svg)](https://coveralls.io/r/void-sector/scalar-objects)
 
 Supports method calls on primitive types in PHP. Allows you to use [Type Hinting](http://www.php.net/manual/en/language.oop5.typehinting.php) on the primitives in your OO project. Values are validated when constructed using there own validators. The project is [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md), [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md) compatable.
 
